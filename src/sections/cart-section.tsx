@@ -14,6 +14,7 @@ import { NextImage, NextLink } from "@site/utilities/deps";
 
 export function CartSection() {
   const cart = useCart();
+  const isCartEmpty = (cart?.totalQuantity ?? 0) === 0;
 
   return (
     <section>
@@ -83,7 +84,10 @@ export function CartSection() {
         </div>
         <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
         <div className="mt-6 flex">
-          <CartCheckoutButton className="flex-1 rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
+          <CartCheckoutButton
+            disabled={isCartEmpty}
+            className="flex-1 rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+          >
             Checkout
           </CartCheckoutButton>
         </div>
