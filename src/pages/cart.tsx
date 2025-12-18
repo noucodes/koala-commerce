@@ -1,6 +1,6 @@
-import { StoreLayout } from "@site/layouts/store-layout";
-import { CartSection } from "@site/sections/cart-section";
-import { NextSeo } from "@site/utilities/deps";
+import { StoreLayout } from "@/layouts/store-layout";
+import { CartSection } from "@/sections/cart-section";
+import { NextSeo } from "@/utilities/deps";
 
 export default function Page() {
   return (

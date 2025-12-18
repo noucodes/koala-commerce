@@ -1,10 +1,10 @@
 import { Money } from "@shopify/hydrogen-react";
 
-import type { DataProps } from "@site/utilities/deps";
+import type { DataProps } from "@/utilities/deps";
 
-import { Button } from "@site/snippets";
-import { NextImage, NextLink, useAsyncFn, useState } from "@site/utilities/deps";
-import { storefront } from "@site/utilities/storefront";
+import { Button } from "@/snippets";
+import { NextImage, NextLink, useAsyncFn, useState } from "@/utilities/deps";
+import { storefront } from "@/utilities/storefront";
 
 export async function fetchProductListSection(cursor?: string) {
   const { products } = await storefront.query({

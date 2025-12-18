@@ -1,6 +1,6 @@
-import type { ReactNode } from "@site/utilities/deps";
+import type { ReactNode } from "@/utilities/deps";
 
-import { HeaderSection } from "@site/sections/header-section";
+import { HeaderSection } from "@/sections/header-section";
 
 interface Props {
   children: ReactNode;

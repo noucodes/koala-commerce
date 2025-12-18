@@ -1,4 +1,4 @@
-import { NextLink } from "@site/utilities/deps";
+import { NextLink } from "@/utilities/deps";
 
 export function HeroSection() {
   return (
