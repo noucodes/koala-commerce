@@ -2,10 +2,10 @@ import "@/assets/style.css";
 import { CartProvider, ShopifyProvider } from "@shopify/hydrogen-react";
 import ProgressBar from "nextjs-progressbar";
 
-import type { NextAppProps } from "@/utilities/deps";
+import type { NextAppProps } from "@/old/utilities/deps";
 
-import { DefaultSeo } from "@/utilities/deps";
-import { env } from "@/utilities/env";
+import { DefaultSeo } from "@/old/utilities/deps";
+import { env } from "@/old/utilities/env";
 
 export default function App({ Component, pageProps }: NextAppProps) {
   return (

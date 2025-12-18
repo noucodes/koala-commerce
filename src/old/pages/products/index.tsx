@@ -1,8 +1,8 @@
-import type { PageProps } from "@/utilities/deps";
+import type { PageProps } from "@/old/utilities/deps";
 
-import { StoreLayout } from "@/layouts/store-layout";
-import { fetchProductListSection, ProductListSection } from "@/sections/product-list-section";
-import { fetchServerSideProps, NextSeo } from "@/utilities/deps";
+import { StoreLayout } from "@/old/layouts/store-layout";
+import { fetchProductListSection, ProductListSection } from "@/old/sections/product-list-section";
+import { fetchServerSideProps, NextSeo } from "@/old/utilities/deps";
 
 export const getStaticProps = fetchServerSideProps(async () => {
   return {

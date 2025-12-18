@@ -1,8 +1,8 @@
-import type { PageProps } from "@/utilities/deps";
+import type { PageProps } from "@/old/utilities/deps";
 
-import { StoreLayout } from "@/layouts/store-layout";
-import { fetchProductSingleSection, ProductSingleSection } from "@/sections/prouct-single-section";
-import { fetchStaticPaths, fetchStaticProps, invariant, NextSeo } from "@/utilities/deps";
+import { StoreLayout } from "@/old/layouts/store-layout";
+import { fetchProductSingleSection, ProductSingleSection } from "@/old/sections/prouct-single-section";
+import { fetchStaticPaths, fetchStaticProps, invariant, NextSeo } from "@/old/utilities/deps";
 
 export const getStaticPaths = fetchStaticPaths(async () => {
   return {

@@ -1,6 +1,6 @@
-import type { ReactNode } from "@/utilities/deps";
+import type { ReactNode } from "@/old/utilities/deps";
 
-import { clsx, NextLink } from "@/utilities/deps";
+import { clsx, NextLink } from "@/old/utilities/deps";
 
 interface Props {
   onClick?: () => void;
@@ -31,7 +31,7 @@ export function Button(props: Props) {
       <NextLink
         href={props.href}
         className={clsx(
-          "pointer-events-auto rounded-md leading-5 font-semibold",
+          "pointer-events-auto rounded-md font-semibold leading-5",
           colors[props.color],
           sizes[props.size],
           props.className,
@@ -46,7 +46,7 @@ export function Button(props: Props) {
     <button
       onClick={props.onClick}
       className={clsx(
-        "pointer-events-auto rounded-md leading-5 font-semibold",
+        "pointer-events-auto rounded-md font-semibold leading-5",
         colors[props.color],
         sizes[props.size],
         props.className,
