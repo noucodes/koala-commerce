@@ -7,5 +7,5 @@ export default defineConfig({
     tailwindFunctions: ["cn"],
     tailwindStylesheet: "src/app/globals.css",
   },
-  ignores: ["src/utilities/storefront/zeus"],
+  ignores: ["src/lib/storefront/generated"],
 });

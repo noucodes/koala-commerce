@@ -11,13 +11,15 @@
     "start": "esmate task start",
     "fix": "esmate task fix",
     "check": "esmate task check",
-    "codegen": "esmate task codegen"
+    "codegen": "graphql-codegen --config codegen.ts"
   },
   "dependencies": {
+    "@graphql-typed-document-node/core": "^3.2.0",
     "@maxvien/shopify": "^1.0.1",
     "@shopify/hydrogen-react": "^2025.7.0",
     "@t3-oss/env-nextjs": "^0.13.10",
     "es-toolkit": "^1.43.0",
+    "graphql": "^16.12.0",
     "next": "^16.0.10",
     "nextjs-progressbar": "^0.0.16",
     "react": "^18.3.1",
@@ -28,6 +30,9 @@
   },
   "devDependencies": {
     "@esmate/prettier": "^1.0.6",
+    "@graphql-codegen/cli": "6.1.0",
+    "@graphql-codegen/client-preset": "5.2.2",
+    "@parcel/watcher": "^2.5.1",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/lodash": "^4.17.21",
     "@types/node": "^24.10.4",
@@ -36,16 +41,19 @@
     "eslint": "^9.39.2",
     "eslint-config-next": "^16.0.10",
     "esmate": "^2.1.3",
-    "graphql-zeus": "^7.1.8",
     "prettier": "^3.7.4",
     "tailwindcss": "^4.1.18",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   },
   "tasks": {
-    "dev": "next dev",
+    "dev": {
+      "next": "next dev",
+      "codegen": "graphql-codegen --config src/lib/storefront/codegen.config.ts"
+    },
     "build": "next build",
     "start": "next start",
-    "codegen": "node codegen.mjs",
+    "codegen": "tsx codegen.ts",
     "fix": [
       "esmate fmt",
       "esmate lint --fix"
