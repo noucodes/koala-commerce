@@ -1,10 +1,11 @@
 // @ts-check
-import { defineConfig } from "esmate/prettier";
+
+import { defineConfig } from "@esmate/prettier";
 
 export default defineConfig({
   tailwind: {
     tailwindFunctions: ["cn"],
     tailwindStylesheet: "src/assets/style.css",
   },
-  ignores: [],
+  ignores: ["src/utilities/storefront/zeus"],
 });

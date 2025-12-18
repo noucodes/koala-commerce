@@ -47,7 +47,7 @@ Clone the source code into your computer.
 git clone https://github.com/VienDinhCom/next-shopify-storefront.git
 ```
 
-**This project was developed with Node 22 and NPM 10.**<br>
+**This project was developed with Node 24 and NPM 11.**<br>
 
 To set up a compatible environment, please download [Volta](https://github.com/volta-cli/volta) and run `volta setup`.
 
