@@ -2,7 +2,7 @@
   "name": "next-shopify-storefront",
   "type": "module",
   "version": "4.0.0",
-  "description": "A Shopping Cart built with TypeScript, Tailwind CSS, Headless UI, Next.js, React.js, Shopify Hydrogen React,... and Shopify Storefront GraphQL API.",
+  "description": "A Shopping Cart built with Tailwind CSS, ShadCN UI, Next.js, React.js, Shopify Hydrogen React,... and Shopify Storefront GraphQL API.",
   "license": "MIT",
   "repository": "https://github.com/VienDinhCom/next-shopify-storefront.git",
   "scripts": {
