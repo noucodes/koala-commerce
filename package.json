@@ -61,7 +61,7 @@
     ],
     "check": [
       "tsc --noEmit",
-      "codegen --check",
+      "graphql-codegen --check --config codegen.config.ts",
       "esmate fmt --check",
       "esmate lint"
     ]
