@@ -11,6 +11,10 @@ import { Badge } from "@esmate/shadcn/components/ui/badge";
 
 const mainMenuItems: { text: string; href: string }[] = [
   {
+    text: "Home",
+    href: "/",
+  },
+  {
     text: "Products",
     href: "/products",
   },
