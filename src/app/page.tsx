@@ -1,33 +1,16 @@
 import { Button } from "@esmate/shadcn/components/ui/button";
 import { Badge } from "@esmate/shadcn/components/ui/badge";
 import { Card } from "@esmate/shadcn/components/ui/card";
-import { ExternalLink, Github, ShoppingCart, ArrowRight } from "@esmate/shadcn/pkgs/lucide-react";
+import { ExternalLink, Github, ShoppingCart } from "@esmate/shadcn/pkgs/lucide-react";
 
 export default function Page() {
   return (
     <section className="mx-auto max-w-4xl px-4 py-10 sm:py-20 lg:py-32">
       <div className="flex flex-col items-center space-y-8">
-        {/* Top Badge */}
-        {/* <Card className="hidden sm:block">
-          <a
-            target="_blank"
-            href="https://github.com/maxvien/next-shopify-storefront"
-            className="flex items-center gap-2 px-4 py-2 text-sm transition-colors hover:bg-accent"
-            rel="noreferrer noopener"
-          >
-            <Badge variant="secondary" className="gap-1">
-              <Github className="h-3 w-3" />
-              Open Source
-            </Badge>
-            <span className="text-muted-foreground">Want to contribute to the project?</span>
-            <ArrowRight className="h-4 w-4 text-muted-foreground" />
-          </a>
-        </Card> */}
-
         {/* Hero Content */}
         <div className="space-y-6 text-center">
           <div className="space-y-4">
-            <h1 className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-6xl">
+            <h1 className="bg-linear-to-r from-primary to-primary/60 bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-6xl">
               Next Shopify Storefront
             </h1>
             <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
