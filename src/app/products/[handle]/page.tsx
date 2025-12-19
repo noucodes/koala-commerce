@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { ProductSingle } from "./product-single";
 import { getProductSingle } from "./services";
 
-export const revalidate = 3600; // Product is fresh for one hour max
+export const revalidate = 60;
 
 interface Props {
   params: Promise<{ handle: string }>;
