@@ -1,6 +1,6 @@
 "use client";
 
-import { AddToCartButton, ProductPrice, ProductProvider } from "@/lib/hydrogen";
+import { AddToCartButton, ProductPrice, ProductProvider } from "@shopify/hydrogen-react";
 import { useVariantSelector } from "@maxvien/shopify";
 import { getProduct } from "./utils";
 import Image from "next/image";

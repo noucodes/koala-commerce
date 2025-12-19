@@ -1,5 +1,5 @@
 "use client";
-import { Money } from "@/lib/hydrogen";
+import { Money } from "@shopify/hydrogen-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@esmate/shadcn/components/ui/button";

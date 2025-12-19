@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ReactNode } from "react";
 import { Header } from "./header";
-import { CartProvider, ShopifyProvider } from "@/lib/hydrogen";
+import { CartProvider, ShopifyProvider } from "@/components/hydrogen";
 import { env } from "@/lib/env";
 import "./globals.css";
 
@@ -30,7 +30,6 @@ export default function Layout(props: Props) {
           storefrontApiVersion={env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_VERSION}
         >
           <CartProvider>
-            {/* <ProgressBar color="orange" /> */}
             <Header />
             <main className="mx-auto max-w-7xl p-6 lg:px-8">{props.children}</main>
           </CartProvider>
