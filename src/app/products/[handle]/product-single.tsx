@@ -1,7 +1,7 @@
 "use client";
 
 import { AddToCartButton, ProductPrice, ProductProvider } from "@shopify/hydrogen-react";
-import { useVariantSelector } from "@maxvien/shopify";
+import { useVariantSelector } from "@/hooks/use-variant-selector";
 import { getProduct } from "./utils";
 import Image from "next/image";
 import { Button } from "@esmate/shadcn/components/ui/button";

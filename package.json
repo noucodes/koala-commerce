@@ -15,7 +15,6 @@
   "dependencies": {
     "@esmate/shadcn": "^3.5.2",
     "@graphql-typed-document-node/core": "^3.2.0",
-    "@maxvien/shopify": "^1.0.1",
     "@shopify/hydrogen-react": "^2025.7.0",
     "@t3-oss/env-nextjs": "^0.13.10",
     "ahooks": "^3.9.6",
