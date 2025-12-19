@@ -4,9 +4,9 @@ import invariant from "tiny-invariant";
 import formatTitle from "title";
 import { truncate } from "es-toolkit/compat";
 
-export async function getProduct(handle: string) {
-  const ProductQuery = graphql(`
-    query ProductByHandle($handle: String!) {
+export async function getProductSingle(handle: string) {
+  const ProductSingleQuery = graphql(`
+    query ProductSingle($handle: String!) {
       product(handle: $handle) {
         title
         description(truncateAt: 256)
@@ -55,7 +55,7 @@ export async function getProduct(handle: string) {
     }
   `);
 
-  const { data } = await storefront.query(ProductQuery, {
+  const { data } = await storefront.query(ProductSingleQuery, {
     handle,
   });
 

@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { ProductList } from "./product-list";
-import { getProductList } from "./utils";
+import { getProductList } from "./services";
 
 export const metadata: Metadata = {
   title: "Products",

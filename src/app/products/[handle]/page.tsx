@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { ProductSingle } from "./product-single";
-import { getProduct } from "./utils";
+import { getProductSingle } from "./services";
 
 export const revalidate = 3600; // Product is fresh for one hour max
 
@@ -10,7 +10,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { handle } = await params;
-  const product = await getProduct(handle);
+  const product = await getProductSingle(handle);
 
   return {
     title: product.seo.title,
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function Page({ params }: Props) {
   const { handle } = await params;
-  const data = await getProduct(handle);
+  const data = await getProductSingle(handle);
 
   return <ProductSingle data={data} />;
 }

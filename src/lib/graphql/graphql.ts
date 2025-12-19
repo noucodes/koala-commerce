@@ -9163,12 +9163,12 @@ export enum WeightUnit {
   Pounds = 'POUNDS'
 }
 
-export type ProductByHandleQueryVariables = Exact<{
+export type ProductSingleQueryVariables = Exact<{
   handle: Scalars['String']['input'];
 }>;
 
 
-export type ProductByHandleQuery = { __typename?: 'QueryRoot', product?: { __typename?: 'Product', title: string, description: string, seo: { __typename?: 'SEO', title?: string | null, description?: string | null }, priceRange: { __typename?: 'ProductPriceRange', minVariantPrice: { __typename?: 'MoneyV2', amount: any, currencyCode: CurrencyCode } }, images: { __typename?: 'ImageConnection', nodes: Array<{ __typename?: 'Image', id?: string | null, url: any, altText?: string | null, width?: number | null, height?: number | null }> }, options: Array<{ __typename?: 'ProductOption', id: string, name: string, values: Array<string> }>, variants: { __typename?: 'ProductVariantConnection', nodes: Array<{ __typename?: 'ProductVariant', id: string, availableForSale: boolean, priceV2: { __typename?: 'MoneyV2', amount: any, currencyCode: CurrencyCode }, selectedOptions: Array<{ __typename?: 'SelectedOption', name: string, value: string }>, image?: { __typename?: 'Image', id?: string | null } | null }> } } | null };
+export type ProductSingleQuery = { __typename?: 'QueryRoot', product?: { __typename?: 'Product', title: string, description: string, seo: { __typename?: 'SEO', title?: string | null, description?: string | null }, priceRange: { __typename?: 'ProductPriceRange', minVariantPrice: { __typename?: 'MoneyV2', amount: any, currencyCode: CurrencyCode } }, images: { __typename?: 'ImageConnection', nodes: Array<{ __typename?: 'Image', id?: string | null, url: any, altText?: string | null, width?: number | null, height?: number | null }> }, options: Array<{ __typename?: 'ProductOption', id: string, name: string, values: Array<string> }>, variants: { __typename?: 'ProductVariantConnection', nodes: Array<{ __typename?: 'ProductVariant', id: string, availableForSale: boolean, priceV2: { __typename?: 'MoneyV2', amount: any, currencyCode: CurrencyCode }, selectedOptions: Array<{ __typename?: 'SelectedOption', name: string, value: string }>, image?: { __typename?: 'Image', id?: string | null } | null }> } } | null };
 
 export type ProductListQueryVariables = Exact<{
   first: Scalars['Int']['input'];
@@ -9197,8 +9197,8 @@ export class TypedDocumentString<TResult, TVariables>
   }
 }
 
-export const ProductByHandleDocument = new TypedDocumentString(`
-    query ProductByHandle($handle: String!) {
+export const ProductSingleDocument = new TypedDocumentString(`
+    query ProductSingle($handle: String!) {
   product(handle: $handle) {
     title
     description(truncateAt: 256)
@@ -9245,7 +9245,7 @@ export const ProductByHandleDocument = new TypedDocumentString(`
     }
   }
 }
-    `) as unknown as TypedDocumentString<ProductByHandleQuery, ProductByHandleQueryVariables>;
+    `) as unknown as TypedDocumentString<ProductSingleQuery, ProductSingleQueryVariables>;
 export const ProductListDocument = new TypedDocumentString(`
     query ProductList($first: Int!, $after: String) {
   products(first: $first, after: $after) {
