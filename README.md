@@ -1,37 +1,35 @@
 # 🛍 Next Shopify Storefront
 
-A **[Shopping Cart](https://github.com/Maxvien/next-shopify-storefront)** built with
-[ESMate](https://github.com/VienDinhCom/esmate), [TypeScript](https://www.typescriptlang.org),
-[Tailwind CSS](https://tailwindcss.com), [Headless UI](https://headlessui.com), [Next.js](https://nextjs.org),
-[React.js](https://react.dev), [Shopify Hydrogen React](https://shopify.dev/docs/api/hydrogen-react), and
-[Shopify Storefront GraphQL API](https://shopify.dev/docs/api/storefront).
+A modern **Shopping Cart** built with [ESMate](https://github.com/VienDinhCom/esmate), Next.js, React.js, ShadCN,
+ESLint, Prettier, GraphQL, and Shopify Hydrogen.
 
 ![Next Shopify Storefront - GitHub Repo Stars](https://img.shields.io/github/stars/maxvien/next-shopify-storefront?label=Stars)
 ![Next Shopify Storefront - GitHub forks](https://img.shields.io/github/forks/maxvien/next-shopify-storefront?label=Forks)
 ![Next Shopify Storefront - Started Years](https://img.shields.io/badge/Since-2019-blue?style=flat)
 
-## Experience
+## Why Next Shopify Storefront?
 
-When I started this project, I had no idea how complex building a storefront could be. But step by step, I figured it
-out.
+Building an online store usually means wrestling with complicated code for days? I wanted to change that.
 
-I designed and built everything from scratch—structuring data, styling components, making sure everything loads fast. I
-used [GraphQL Zeus](https://github.com/graphql-editor/graphql-zeus) to talk to
-[Shopify’s GraphQL API](https://shopify.dev/docs/api/storefront),
-[Shopify Hydrogen](https://shopify.dev/docs/custom-storefronts/hydrogen-react) to power the storefront, and
-[Next.js](https://nextjs.org) for performance.
+So I created [Next Shopify Storefront](https://github.com/VienDinhCom/next-shopify-storefront)—basically, it's a starter
+kit that lets you build a Shopify store incredibly fast. Think of it as a foundation that's already solid, so you can
+focus on what makes your store unique instead of reinventing the wheel.
 
-[Tailwind CSS](https://tailwindcss.com/) and [Headless UI](https://headlessui.com/) made styling smooth.
-[TypeScript](https://www.typescriptlang.org/) kept everything safe and predictable.
-[React Use](https://github.com/streamich/react-use) Hooks sped up development. I even built
-[Shopify Utilities](https://www.npmjs.com/package/@maxvien/shopify) to make selecting product variants easier.
+Here's what I'm talking about: it uses Next.js and React for the framework,
+[TailwindCSS](https://github.com/VienDinhCom/esmate/tree/main/packages/shadcn) and
+[ShadCN](https://github.com/VienDinhCom/esmate/tree/main/packages/shadcn) to make things look great, and connects
+directly to Shopify's backend through their
+[GraphQL API](https://shopify.dev/docs/storefronts/headless/building-with-the-storefront-api/api-exploration/graphiql-storefront-api)
+The shopping cart? Built with [Shopify Hydrogen React](https://www.npmjs.com/package/@shopify/hydrogen-react).
 
-Then came [SEO](https://www.npmjs.com/package/next-seo), best practices, and refining the user experience.
-[Swiper](https://swiperjs.com/) made touch interactions feel natural. [ESMate](https://github.com/VienDinhCom/esmate),
-[ESlint](https://eslint.org/) and [Prettier](https://prettier.io/) kept the code clean.
+But the part I'm most proud of is the developer experience. Everything's
+configured—[ESMate](https://github.com/VienDinhCom/esmate),
+[ESLint](https://github.com/VienDinhCom/esmate/tree/main/packages/eslint),
+[Prettier](https://github.com/VienDinhCom/esmate/tree/main/packages/prettier),
+[GraphQL Codegen](https://www.npmjs.com/package/@graphql-codegen/cli)—so the code stays clean and safe automatically.
 
-It was a process of learning, breaking things, fixing them, and refining. And in the end, it wasn’t just about building
-a store—it was about building something that works beautifully.
+It's not revolutionary. It's just taking what works and packaging it so you can skip the tedious setup and start
+building something meaningful.
 
 If you like this project, hit the **STAR** button to bookmark it ⭐️
 
@@ -47,14 +45,14 @@ Clone the source code into your computer.
 git clone https://github.com/VienDinhCom/next-shopify-storefront.git
 ```
 
-**This project was developed with Node 24 and NPM 11.**<br>
+**This project was developed with Node 24 and PNPM 10.**<br>
 
 To set up a compatible environment, please download [Volta](https://github.com/volta-cli/volta) and run `volta setup`.
 
 Then, install the project's dependencies.
 
 ```bash
-npm install
+pnpm install
 ```
 
 ## Usage
@@ -73,7 +71,7 @@ get Storefront API information.
 Develop the project in development mode.
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 ### Build
@@ -81,7 +79,7 @@ npm run dev
 Build the project in production mode.
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 ### Start
@@ -89,7 +87,7 @@ npm run build
 Start the project in production mode.
 
 ```bash
-npm run start
+pnpm run start
 ```
 
 ### Lint & Format
@@ -97,13 +95,13 @@ npm run start
 Analyze the code to find problems with `eslint` and `prettier`.
 
 ```bash
-npm run check
+pnpm run check
 ```
 
 Automatically fix problems.
 
 ```bash
-npm run fix
+pnpm run fix
 ```
 
 ## Visual Studio Code Extensions
@@ -112,16 +110,7 @@ To speed up your productivity, you can install these extensions:
 
 - [Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
-- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
-- [PostCSS Language Support](https://marketplace.visualstudio.com/items?itemName=csstools.postcss)
-
-## Tutorials
-
-- [How Do I Organize a Sustainable Next.js Project?](https://github.com/Maxvien/next-shopify-storefront/issues/68)
-- [How Do I Handle Typesafe Modular Data Fetching in Next.js?](https://github.com/Maxvien/next-shopify-storefront/issues/69)
-- [How Do I Interact Safely with GraphQL API in Next.js?](https://github.com/Maxvien/next-shopify-storefront/issues/70)
-- [How Do I Implement Dynamic Variant Selector for Shopify in Next.js?](https://github.com/Maxvien/next-shopify-storefront/issues/71)
+- [TailwindCSS](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
 ## Related Projects
 
@@ -129,6 +118,8 @@ To speed up your productivity, you can install these extensions:
   dummy store data.
 - **[Bootstrap Shopify Theme](https://github.com/Maxvien/bootstrap-shopify-theme/tree/v1)** • A free Shopify Theme built
   with Bootstrap, BEM, Liquid, Sass, ESNext, Theme Tools, ... and Webpack.
+- **[Next Shopify Storefront (v3)](https://github.com/Maxvien/next-shopify-storefront/tree/v3)** • A Shopping Cart built
+  with TailwindCSS, HeadlessUI, Next.js, React.js, Shopify Hydrogen,... and Shopify Storefront GraphQL API.
 - **[Next Shopify Storefront (v2)](https://github.com/Maxvien/next-shopify-storefront/tree/v2)** • A Shopping Cart built
   with TypeScript, Emotion, Next.js, React.js, React Query, Shopify Storefront GraphQL API, ... and Material UI.
 - **[Next Shopify Storefront (v1)](https://github.com/Maxvien/next-shopify-storefront/tree/v1)** • A Shopping Cart built
