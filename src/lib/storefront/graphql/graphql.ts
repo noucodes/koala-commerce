@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { DocumentTypeDecoration } from '@graphql-typed-document-node/core';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = T | null | undefined;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
@@ -9161,3 +9162,35 @@ export enum WeightUnit {
   /** 1 pound equals 16 ounces. */
   Pounds = 'POUNDS'
 }
+
+export type ShopQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type ShopQuery = { __typename?: 'QueryRoot', shop: { __typename?: 'Shop', name: string } };
+
+export class TypedDocumentString<TResult, TVariables>
+  extends String
+  implements DocumentTypeDecoration<TResult, TVariables>
+{
+  __apiType?: NonNullable<DocumentTypeDecoration<TResult, TVariables>['__apiType']>;
+  private value: string;
+  public __meta__?: Record<string, any> | undefined;
+
+  constructor(value: string, __meta__?: Record<string, any> | undefined) {
+    super(value);
+    this.value = value;
+    this.__meta__ = __meta__;
+  }
+
+  override toString(): string & DocumentTypeDecoration<TResult, TVariables> {
+    return this.value;
+  }
+}
+
+export const ShopDocument = new TypedDocumentString(`
+    query Shop {
+  shop {
+    name
+  }
+}
+    `) as unknown as TypedDocumentString<ShopQuery, ShopQueryVariables>;

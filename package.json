@@ -32,9 +32,9 @@
     "@esmate/prettier": "^1.0.6",
     "@graphql-codegen/cli": "6.1.0",
     "@graphql-codegen/client-preset": "5.2.2",
+    "@graphql-codegen/schema-ast": "^5.0.0",
     "@parcel/watcher": "^2.5.1",
     "@tailwindcss/postcss": "^4.1.18",
-    "@types/lodash": "^4.17.21",
     "@types/node": "^24.10.4",
     "@types/react": "^18.3.27",
     "@types/react-dom": "^18.3.7",
@@ -43,7 +43,6 @@
     "esmate": "^2.1.3",
     "prettier": "^3.7.4",
     "tailwindcss": "^4.1.18",
-    "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   },
   "tasks": {
