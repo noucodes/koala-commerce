@@ -18,6 +18,10 @@ const mainMenuItems: { text: string; href: string }[] = [
     text: "Products",
     href: "/products",
   },
+  {
+    text: "Cart",
+    href: "/cart",
+  },
 ];
 
 export function Header() {
@@ -40,7 +44,7 @@ export function Header() {
           </Link>
         </div>
 
-        <div className="hidden lg:flex lg:gap-x-12">
+        <div className="hidden lg:flex lg:gap-x-5">
           {mainMenuItems.map(({ text, href }) => (
             <Link
               className={`text-sm leading-6 font-semibold transition-colors hover:text-primary ${
