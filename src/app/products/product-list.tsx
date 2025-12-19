@@ -8,6 +8,7 @@ import { Loader2 } from "@esmate/shadcn/pkgs/lucide-react";
 import { useState } from "react";
 import { getProductList } from "./utils";
 import { useRequest } from "ahooks";
+import formatTitle from "title";
 
 interface Props {
   data: Awaited<ReturnType<typeof getProductList>>;
@@ -48,7 +49,7 @@ export function ProductList(props: Props) {
                   />
                 </CardHeader>
                 <CardFooter className="mt-auto flex flex-col items-start justify-center gap-2">
-                  <h3 className="text-md font-bold">{node.title}</h3>
+                  <h3 className="text-md font-bold">{formatTitle(node.title)}</h3>
                   <Money className="text-sm" data={node.priceRange.minVariantPrice} />
                 </CardFooter>
               </Card>
