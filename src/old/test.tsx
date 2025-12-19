@@ -1,4 +1,4 @@
-import { graphql, storefrontClient } from "@/lib/storefront";
+import { graphql, storefront } from "@/lib/storefront";
 
 const shopQuery = graphql(`
   query Shop {
@@ -8,6 +8,6 @@ const shopQuery = graphql(`
   }
 `);
 
-const r = await storefrontClient(shopQuery);
+const r = await storefront.query(shopQuery);
 
 const name = r.data?.shop.name;

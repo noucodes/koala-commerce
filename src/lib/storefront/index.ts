@@ -9,7 +9,7 @@ export const { getStorefrontApiUrl, getPublicTokenHeaders } = createStorefrontCl
   publicStorefrontToken: env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_TOKEN,
 });
 
-export async function storefrontClient<TResult, TVariables>(
+async function execute<TResult, TVariables>(
   query: TypedDocumentString<TResult, TVariables>,
   ...[variables]: TVariables extends Record<string, never> ? [] : [TVariables]
 ) {
@@ -25,5 +25,10 @@ export async function storefrontClient<TResult, TVariables>(
 
   return response.json() as ExecutionResult<TResult>;
 }
+
+export const storefront = {
+  query: execute,
+  mutation: execute,
+};
 
 export * from "./graphql";
