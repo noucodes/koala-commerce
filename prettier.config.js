@@ -7,5 +7,5 @@ export default defineConfig({
     tailwindFunctions: ["cn"],
     tailwindStylesheet: "src/app/globals.css",
   },
-  ignores: ["src/lib/storefront/generated"],
+  ignores: ["src/lib/storefront/graphql"],
 });
