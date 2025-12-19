@@ -26,4 +26,4 @@ export async function storefrontClient<TResult, TVariables>(
   return response.json() as ExecutionResult<TResult>;
 }
 
-export type * as Storefront from "./graphql";
+export * from "./graphql";

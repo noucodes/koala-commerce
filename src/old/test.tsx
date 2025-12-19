@@ -1,5 +1,4 @@
-import { graphql } from "@/lib/storefront/graphql";
-import { storefrontClient } from "@/lib/storefront";
+import { graphql, storefrontClient } from "@/lib/storefront";
 
 const shopQuery = graphql(`
   query Shop {
