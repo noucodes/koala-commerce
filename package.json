@@ -49,7 +49,7 @@
   "tasks": {
     "dev": {
       "next": "next dev",
-      "codegen": "graphql-codegen --config src/lib/storefront/codegen.config.ts"
+      "codegen": "graphql-codegen --config codegen.config.ts"
     },
     "build": "next build",
     "start": "next start",
@@ -60,6 +60,7 @@
     ],
     "check": [
       "tsc --noEmit",
+      "codegen --check",
       "esmate fmt --check",
       "esmate lint"
     ]
