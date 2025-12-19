@@ -7,7 +7,7 @@ ESLint, Prettier, GraphQL, and Shopify Hydrogen.
 ![Next Shopify Storefront - GitHub forks](https://img.shields.io/github/forks/maxvien/next-shopify-storefront?label=Forks)
 ![Next Shopify Storefront - Started Years](https://img.shields.io/badge/Since-2019-blue?style=flat)
 
-## Why Next Shopify Storefront?
+## Why?
 
 Building an online store usually means wrestling with complicated code for days? I wanted to change that.
 
