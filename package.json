@@ -13,6 +13,7 @@
     "check": "esmate task check"
   },
   "dependencies": {
+    "@esmate/shadcn": "^3.5.2",
     "@graphql-typed-document-node/core": "^3.2.0",
     "@maxvien/shopify": "^1.0.1",
     "@shopify/hydrogen-react": "^2025.7.0",
