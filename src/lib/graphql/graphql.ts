@@ -9163,6 +9163,14 @@ export enum WeightUnit {
   Pounds = 'POUNDS'
 }
 
+export type ProductListQueryVariables = Exact<{
+  first: Scalars['Int']['input'];
+  after?: InputMaybe<Scalars['String']['input']>;
+}>;
+
+
+export type ProductListQuery = { __typename?: 'QueryRoot', products: { __typename?: 'ProductConnection', pageInfo: { __typename?: 'PageInfo', hasNextPage: boolean }, edges: Array<{ __typename?: 'ProductEdge', cursor: string, node: { __typename?: 'Product', handle: string, title: string, priceRange: { __typename?: 'ProductPriceRange', minVariantPrice: { __typename?: 'MoneyV2', amount: any, currencyCode: CurrencyCode } }, featuredImage?: { __typename?: 'Image', url: any, altText?: string | null, width?: number | null, height?: number | null } | null } }> } };
+
 export type ShopQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -9187,6 +9195,34 @@ export class TypedDocumentString<TResult, TVariables>
   }
 }
 
+export const ProductListDocument = new TypedDocumentString(`
+    query ProductList($first: Int!, $after: String) {
+  products(first: $first, after: $after) {
+    pageInfo {
+      hasNextPage
+    }
+    edges {
+      cursor
+      node {
+        handle
+        title
+        priceRange {
+          minVariantPrice {
+            amount
+            currencyCode
+          }
+        }
+        featuredImage {
+          url(transform: {maxWidth: 500})
+          altText
+          width
+          height
+        }
+      }
+    }
+  }
+}
+    `) as unknown as TypedDocumentString<ProductListQuery, ProductListQueryVariables>;
 export const ShopDocument = new TypedDocumentString(`
     query Shop {
   shop {

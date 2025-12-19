@@ -15,12 +15,18 @@ import * as types from './graphql';
  * Learn more about it here: https://the-guild.dev/graphql/codegen/plugins/presets/preset-client#reducing-bundle-size
  */
 type Documents = {
+    "\n    query ProductList($first: Int!, $after: String) {\n      products(first: $first, after: $after) {\n        pageInfo {\n          hasNextPage\n        }\n        edges {\n          cursor\n          node {\n            handle\n            title\n            priceRange {\n              minVariantPrice {\n                amount\n                currencyCode\n              }\n            }\n            featuredImage {\n              url(transform: { maxWidth: 500 })\n              altText\n              width\n              height\n            }\n          }\n        }\n      }\n    }\n  ": typeof types.ProductListDocument,
     "\n  query Shop {\n    shop {\n      name\n    }\n  }\n": typeof types.ShopDocument,
 };
 const documents: Documents = {
+    "\n    query ProductList($first: Int!, $after: String) {\n      products(first: $first, after: $after) {\n        pageInfo {\n          hasNextPage\n        }\n        edges {\n          cursor\n          node {\n            handle\n            title\n            priceRange {\n              minVariantPrice {\n                amount\n                currencyCode\n              }\n            }\n            featuredImage {\n              url(transform: { maxWidth: 500 })\n              altText\n              width\n              height\n            }\n          }\n        }\n      }\n    }\n  ": types.ProductListDocument,
     "\n  query Shop {\n    shop {\n      name\n    }\n  }\n": types.ShopDocument,
 };
 
+/**
+ * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function graphql(source: "\n    query ProductList($first: Int!, $after: String) {\n      products(first: $first, after: $after) {\n        pageInfo {\n          hasNextPage\n        }\n        edges {\n          cursor\n          node {\n            handle\n            title\n            priceRange {\n              minVariantPrice {\n                amount\n                currencyCode\n              }\n            }\n            featuredImage {\n              url(transform: { maxWidth: 500 })\n              altText\n              width\n              height\n            }\n          }\n        }\n      }\n    }\n  "): typeof import('./graphql').ProductListDocument;
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
