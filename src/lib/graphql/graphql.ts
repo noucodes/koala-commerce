@@ -9163,6 +9163,13 @@ export enum WeightUnit {
   Pounds = 'POUNDS'
 }
 
+export type ProductByHandleQueryVariables = Exact<{
+  handle: Scalars['String']['input'];
+}>;
+
+
+export type ProductByHandleQuery = { __typename?: 'QueryRoot', product?: { __typename?: 'Product', title: string, description: string, seo: { __typename?: 'SEO', title?: string | null, description?: string | null }, priceRange: { __typename?: 'ProductPriceRange', minVariantPrice: { __typename?: 'MoneyV2', amount: any, currencyCode: CurrencyCode } }, images: { __typename?: 'ImageConnection', nodes: Array<{ __typename?: 'Image', id?: string | null, url: any, altText?: string | null, width?: number | null, height?: number | null }> }, options: Array<{ __typename?: 'ProductOption', id: string, name: string, values: Array<string> }>, variants: { __typename?: 'ProductVariantConnection', nodes: Array<{ __typename?: 'ProductVariant', id: string, availableForSale: boolean, priceV2: { __typename?: 'MoneyV2', amount: any, currencyCode: CurrencyCode }, selectedOptions: Array<{ __typename?: 'SelectedOption', name: string, value: string }>, image?: { __typename?: 'Image', id?: string | null } | null }> } } | null };
+
 export type ProductListQueryVariables = Exact<{
   first: Scalars['Int']['input'];
   after?: InputMaybe<Scalars['String']['input']>;
@@ -9195,6 +9202,55 @@ export class TypedDocumentString<TResult, TVariables>
   }
 }
 
+export const ProductByHandleDocument = new TypedDocumentString(`
+    query ProductByHandle($handle: String!) {
+  product(handle: $handle) {
+    title
+    description(truncateAt: 256)
+    seo {
+      title
+      description
+    }
+    priceRange {
+      minVariantPrice {
+        amount
+        currencyCode
+      }
+    }
+    images(first: 250) {
+      nodes {
+        id
+        url(transform: {maxHeight: 600})
+        altText
+        width
+        height
+      }
+    }
+    options(first: 250) {
+      id
+      name
+      values
+    }
+    variants(first: 250) {
+      nodes {
+        id
+        availableForSale
+        priceV2 {
+          amount
+          currencyCode
+        }
+        selectedOptions {
+          name
+          value
+        }
+        image {
+          id
+        }
+      }
+    }
+  }
+}
+    `) as unknown as TypedDocumentString<ProductByHandleQuery, ProductByHandleQueryVariables>;
 export const ProductListDocument = new TypedDocumentString(`
     query ProductList($first: Int!, $after: String) {
   products(first: $first, after: $after) {
