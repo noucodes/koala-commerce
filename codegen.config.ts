@@ -7,7 +7,7 @@ const config: CodegenConfig = {
   watch: true,
   overwrite: true,
   ignoreNoDocuments: true,
-  documents: ["./src/**/*.tsx"],
+  documents: ["./src/**/*.{ts,tsx}"],
   schema: {
     [storefrontEndpoint]: {
       headers: {

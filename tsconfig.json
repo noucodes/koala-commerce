@@ -14,7 +14,13 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "incremental": true,
-    "plugins": [{ "name": "next" }],
+    "plugins": [
+      { "name": "next" },
+      {
+        "name": "@0no-co/graphqlsp",
+        "schema": "./src/lib/storefront/graphql/schema.gql"
+      }
+    ],
     "paths": {
       "@/*": ["./src/*"]
     }
