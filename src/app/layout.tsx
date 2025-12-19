@@ -20,7 +20,7 @@ interface Props {
 
 export default function Layout(props: Props) {
   return (
-    <html lang="en">
+    <html lang="en" className="light">
       <body>
         <ShopifyProvider
           languageIsoCode="EN"
