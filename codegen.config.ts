@@ -1,5 +1,5 @@
 import { CodegenConfig } from "@graphql-codegen/cli";
-import { getPublicTokenHeaders, getStorefrontApiUrl } from "./src/lib/storefront/index.ts";
+import { getPublicTokenHeaders, getStorefrontApiUrl } from "./src/lib/storefront.ts";
 
 const config: CodegenConfig = {
   overwrite: true,
@@ -11,13 +11,13 @@ const config: CodegenConfig = {
     },
   },
   generates: {
-    ["./src/lib/storefront/graphql/"]: {
+    ["./src/lib/graphql/"]: {
       preset: "client",
       config: {
         documentMode: "string",
       },
     },
-    "./src/lib/storefront/graphql/schema.gql": {
+    "./src/lib/graphql/schema.gql": {
       plugins: ["schema-ast"],
       config: {
         includeDirectives: true,

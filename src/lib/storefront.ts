@@ -1,7 +1,7 @@
 import type { ExecutionResult } from "graphql";
 import { createStorefrontClient } from "@shopify/hydrogen-react";
 import type { TypedDocumentString } from "./graphql/graphql";
-import { env } from "../env";
+import { env } from "./env";
 
 export const { getStorefrontApiUrl, getPublicTokenHeaders } = createStorefrontClient({
   storeDomain: env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN,

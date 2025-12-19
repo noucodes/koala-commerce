@@ -18,7 +18,7 @@
       { "name": "next" },
       {
         "name": "@0no-co/graphqlsp",
-        "schema": "./src/lib/storefront/graphql/schema.gql"
+        "schema": "./src/lib/graphql/schema.gql"
       }
     ],
     "paths": {
