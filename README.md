@@ -15,7 +15,8 @@ So I created [Next Shopify Storefront](https://github.com/VienDinhCom/next-shopi
 kit that lets you build a Shopify store incredibly fast. Think of it as a foundation that's already solid, so you can
 focus on what makes your store unique instead of reinventing the wheel.
 
-Here's what I'm talking about: it uses Next.js and React for the framework,
+Here's what I'm talking about: it uses [Next.js](https://github.com/VienDinhCom/esmate/tree/main/templates/react-next)
+and [React.js](https://github.com/VienDinhCom/esmate/tree/main/templates/react-spa) for the framework,
 [TailwindCSS](https://github.com/VienDinhCom/esmate/tree/main/packages/shadcn) and
 [ShadCN](https://github.com/VienDinhCom/esmate/tree/main/packages/shadcn) to make things look great, and connects
 directly to Shopify's backend through their
