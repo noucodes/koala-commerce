@@ -2,6 +2,7 @@ import { Button } from "@esmate/shadcn/components/ui/button";
 import { Badge } from "@esmate/shadcn/components/ui/badge";
 import { Card } from "@esmate/shadcn/components/ui/card";
 import { ExternalLink, Github, ShoppingCart } from "@esmate/shadcn/pkgs/lucide-react";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -71,10 +72,10 @@ export default function Page() {
           {/* CTA Buttons */}
           <div className="flex flex-col items-center justify-center gap-4 pt-4 sm:flex-row">
             <Button asChild size="lg" className="w-full gap-2 sm:w-auto">
-              <a href="/products">
+              <Link href="/products">
                 <ShoppingCart className="h-4 w-4" />
                 Browse Products
-              </a>
+              </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="w-full gap-2 sm:w-auto">
               <a href="https://github.com/maxvien/next-shopify-storefront" target="_blank" rel="noopener noreferrer">

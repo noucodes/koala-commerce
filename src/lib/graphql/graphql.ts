@@ -9178,11 +9178,6 @@ export type ProductListQueryVariables = Exact<{
 
 export type ProductListQuery = { __typename?: 'QueryRoot', products: { __typename?: 'ProductConnection', pageInfo: { __typename?: 'PageInfo', hasNextPage: boolean }, edges: Array<{ __typename?: 'ProductEdge', cursor: string, node: { __typename?: 'Product', handle: string, title: string, priceRange: { __typename?: 'ProductPriceRange', minVariantPrice: { __typename?: 'MoneyV2', amount: any, currencyCode: CurrencyCode } }, featuredImage?: { __typename?: 'Image', url: any, altText?: string | null, width?: number | null, height?: number | null } | null } }> } };
 
-export type ShopQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type ShopQuery = { __typename?: 'QueryRoot', shop: { __typename?: 'Shop', name: string } };
-
 export class TypedDocumentString<TResult, TVariables>
   extends String
   implements DocumentTypeDecoration<TResult, TVariables>
@@ -9279,10 +9274,3 @@ export const ProductListDocument = new TypedDocumentString(`
   }
 }
     `) as unknown as TypedDocumentString<ProductListQuery, ProductListQueryVariables>;
-export const ShopDocument = new TypedDocumentString(`
-    query Shop {
-  shop {
-    name
-  }
-}
-    `) as unknown as TypedDocumentString<ShopQuery, ShopQueryVariables>;
