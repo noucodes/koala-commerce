@@ -30,5 +30,3 @@ export const storefront = {
   query: execute,
   mutation: execute,
 };
-
-export * from "./graphql";
