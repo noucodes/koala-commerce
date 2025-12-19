@@ -21,8 +21,7 @@ export function ProductList(props: Props) {
 
   const request = useRequest(
     async () => {
-      const productList = await getProductList(lastCursor);
-      setPages([...pages, productList]);
+      setPages([...pages, await getProductList(lastCursor)]);
     },
     {
       manual: true,
