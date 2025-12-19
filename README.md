@@ -19,7 +19,7 @@ Here's what I'm talking about: it uses Next.js and React for the framework,
 [TailwindCSS](https://github.com/VienDinhCom/esmate/tree/main/packages/shadcn) and
 [ShadCN](https://github.com/VienDinhCom/esmate/tree/main/packages/shadcn) to make things look great, and connects
 directly to Shopify's backend through their
-[GraphQL API](https://shopify.dev/docs/storefronts/headless/building-with-the-storefront-api/api-exploration/graphiql-storefront-api)
+[GraphQL API](https://shopify.dev/docs/storefronts/headless/building-with-the-storefront-api/api-exploration/graphiql-storefront-api).
 The shopping cart? Built with [Shopify Hydrogen React](https://www.npmjs.com/package/@shopify/hydrogen-react).
 
 But the part I'm most proud of is the developer experience. Everything's
