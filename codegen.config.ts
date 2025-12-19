@@ -4,7 +4,6 @@ import { env } from "./src/lib/env.ts";
 export const storefrontEndpoint = `${env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN}/api/${env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_VERSION}/graphql.json`;
 
 const config: CodegenConfig = {
-  watch: true,
   overwrite: true,
   ignoreNoDocuments: true,
   documents: ["./src/**/*.{ts,tsx}"],
