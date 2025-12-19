@@ -32,13 +32,12 @@ export function ProductList(props: Props) {
   return (
     <section className="container mx-auto py-6">
       <h1 className="sr-only">Products</h1>
-
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {pages
           .flatMap(({ edges }) => edges)
           .map(({ node }) => (
-            <Link key={node.handle} href={`/products/${node.handle}`} className="group">
-              <Card className="overflow-hidden pt-0">
+            <Link key={node.handle} href={`/products/${node.handle}`} className="group flex">
+              <Card className="flex w-full flex-col overflow-hidden pt-0">
                 <CardHeader className="m-0 p-0">
                   <Image
                     src={node.featuredImage!.url as string}
@@ -49,7 +48,7 @@ export function ProductList(props: Props) {
                     className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </CardHeader>
-                <CardFooter className="flex flex-col items-start justify-center gap-2">
+                <CardFooter className="mt-auto flex flex-col items-start justify-center gap-2">
                   <h3 className="text-md font-bold">{node.title}</h3>
                   <Money className="text-sm" data={node.priceRange.minVariantPrice} />
                 </CardFooter>
@@ -57,7 +56,6 @@ export function ProductList(props: Props) {
             </Link>
           ))}
       </div>
-
       {hasNextPage && (
         <div className="mt-12 flex justify-center">
           <Button
