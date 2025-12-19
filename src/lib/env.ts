@@ -10,5 +10,9 @@ export const env = createEnv({
     NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_VERSION: z.string(),
   },
   emptyStringAsUndefined: true,
-  runtimeEnv: process.env as any, // eslint-disable-line @typescript-eslint/no-explicit-any
+  runtimeEnv: {
+    NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN: process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN,
+    NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_TOKEN: process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_TOKEN,
+    NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_VERSION: process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_VERSION,
+  },
 });
