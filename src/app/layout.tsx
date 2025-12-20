@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s • Next Shopify Storefront",
   },
   description:
-    "A modern Shopping Cart built with ESMate , ShadCN , Next.js , React.js , ESLint , Prettier , GraphQL, and Shopify Hydrogen.",
+    "A modern Shopping Cart built with ESMate, Next.js, React.js, ShadCN, ESLint, Prettier, GraphQL, and Shopify Hydrogen.",
 };
 
 interface Props {
