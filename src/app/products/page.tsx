@@ -2,6 +2,8 @@ import { Metadata } from "next";
 import { ProductList } from "./product-list";
 import { getProductList } from "./services";
 
+export const revalidate = 60;
+
 export const metadata: Metadata = {
   title: "Products",
   description: "All products on the store",
