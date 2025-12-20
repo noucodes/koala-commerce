@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ReactNode } from "react";
 import { Header } from "./header";
+import TopLoader from "nextjs-toploader";
 import { CartProvider, ShopifyProvider } from "@/components/hydrogen";
 import { env } from "@/lib/env";
 import "./globals.css";
@@ -22,6 +23,7 @@ export default function Layout(props: Props) {
   return (
     <html lang="en" className="light">
       <body>
+        <TopLoader color="orange" />
         <ShopifyProvider
           languageIsoCode="EN"
           countryIsoCode="US"
