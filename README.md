@@ -1,19 +1,19 @@
-# 🛍 Next Shopify Storefront
+# 🛍 Next.js Shopify Storefront
 
 A modern **Shopping Cart** built with [ESMate](https://github.com/VienDinhCom/esmate), Next.js, React.js, ShadCN,
 ESLint, Prettier, GraphQL, and Shopify Hydrogen.
 
-![Next Shopify Storefront - GitHub Repo Stars](https://img.shields.io/github/stars/maxvien/next-shopify-storefront?label=Stars)
-![Next Shopify Storefront - GitHub forks](https://img.shields.io/github/forks/maxvien/next-shopify-storefront?label=Forks)
-![Next Shopify Storefront - Started Years](https://img.shields.io/badge/Since-2019-blue?style=flat)
+![Next.js Shopify Storefront - GitHub Repo Stars](https://img.shields.io/github/stars/maxvien/next-shopify-storefront?label=Stars)
+![Next.js Shopify Storefront - GitHub forks](https://img.shields.io/github/forks/maxvien/next-shopify-storefront?label=Forks)
+![Next.js Shopify Storefront - Started Years](https://img.shields.io/badge/Since-2019-blue?style=flat)
 
 ## Why?
 
 Building an online store usually means wrestling with complicated code for days? I wanted to change that.
 
-So I created [Next Shopify Storefront](https://github.com/VienDinhCom/next-shopify-storefront)—basically, it's a starter
-kit that lets you build a Shopify store incredibly fast. Think of it as a foundation that's already solid, so you can
-focus on what makes your store unique instead of reinventing the wheel.
+So I created [Next.js Shopify Storefront](https://github.com/VienDinhCom/next-shopify-storefront)—basically, it's a
+starter kit that lets you build a Shopify store incredibly fast. Think of it as a foundation that's already solid, so
+you can focus on what makes your store unique instead of reinventing the wheel.
 
 Here's what I'm talking about: it uses [Next.js](https://github.com/VienDinhCom/esmate/tree/main/templates/react-next)
 and [React.js](https://github.com/VienDinhCom/esmate/tree/main/templates/react-spa) for the framework,
