@@ -7,8 +7,8 @@ import { Card, CardFooter, CardHeader } from "@esmate/shadcn/components/ui/card"
 import { Loader2 } from "@esmate/shadcn/pkgs/lucide-react";
 import { useState } from "react";
 import { getProductList } from "./services";
-import { useRequest } from "ahooks";
-import formatTitle from "title";
+import { useRequest } from "@esmate/react/ahooks";
+import { titleize } from "@esmate/utils/string";
 
 interface Props {
   data: Awaited<ReturnType<typeof getProductList>>;
@@ -49,7 +49,7 @@ export function ProductList(props: Props) {
                   />
                 </CardHeader>
                 <CardFooter className="mt-auto flex flex-col items-start justify-center gap-2">
-                  <h3 className="text-md font-bold">{formatTitle(node.title)}</h3>
+                  <h3 className="text-md font-bold">{titleize(node.title)}</h3>
                   <Money className="text-sm" data={node.priceRange.minVariantPrice} />
                 </CardFooter>
               </Card>

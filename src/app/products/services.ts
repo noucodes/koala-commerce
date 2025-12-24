@@ -1,6 +1,6 @@
 import { graphql } from "@/lib/graphql";
 import { storefront } from "@/lib/storefront";
-import invariant from "tiny-invariant";
+import { invariant } from "@esmate/utils";
 
 export async function getProductList(cursor?: string) {
   const ProductListQuery = graphql(`

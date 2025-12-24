@@ -1,8 +1,8 @@
 import { graphql } from "@/lib/graphql";
 import { storefront } from "@/lib/storefront";
-import invariant from "tiny-invariant";
-import formatTitle from "title";
-import { truncate } from "es-toolkit/compat";
+import { invariant } from "@esmate/utils";
+import { truncate } from "@esmate/utils/lodash";
+import { titleize } from "@esmate/utils/string";
 
 export async function getProductSingle(handle: string) {
   const ProductSingleQuery = graphql(`
@@ -66,7 +66,7 @@ export async function getProductSingle(handle: string) {
   return {
     ...data.product,
     seo: {
-      title: formatTitle(seo.title || title),
+      title: titleize(seo.title || title),
       description: seo.description || truncate(description, { length: 256 }),
     },
   };
