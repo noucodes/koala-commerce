@@ -6,7 +6,7 @@ import { Button } from "@esmate/shadcn/components/ui/button";
 import { Card, CardFooter, CardHeader } from "@esmate/shadcn/components/ui/card";
 import { Loader2 } from "@esmate/shadcn/pkgs/lucide-react";
 import { useState } from "react";
-import { getProductList } from "./services";
+import { getProductList } from "./service";
 import { useRequest } from "@esmate/react/ahooks";
 import { titleize } from "@esmate/utils/string";
 

@@ -2,7 +2,7 @@
 
 import { AddToCartButton, ProductPrice, ProductProvider } from "@shopify/hydrogen-react";
 import { useVariantSelector } from "@/hooks/use-variant-selector";
-import { getProductSingle } from "./services";
+import { getProductSingle } from "./service";
 import Image from "next/image";
 import { Button } from "@esmate/shadcn/components/ui/button";
 import { Card, CardContent } from "@esmate/shadcn/components/ui/card";

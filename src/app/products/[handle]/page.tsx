@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { ProductSingle } from "./product-single";
-import { getProductSingle } from "./services";
+import { getProductSingle } from "./service";
 
 export const revalidate = 60;
 
