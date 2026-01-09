@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { ReactNode } from "react";
 import { Header } from "./header";
 import TopLoader from "nextjs-toploader";
-import { CartProvider, ShopifyProvider } from "@/lib/hydrogen";
-import { env } from "@/lib/env";
+import Providers from "./providers";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -24,18 +23,10 @@ export default function Layout(props: Props) {
     <html lang="en" className="light">
       <body>
         <TopLoader color="orange" />
-        <ShopifyProvider
-          languageIsoCode="EN"
-          countryIsoCode="US"
-          storeDomain={env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN}
-          storefrontToken={env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_TOKEN}
-          storefrontApiVersion={env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_VERSION}
-        >
-          <CartProvider>
-            <Header />
-            <main className="mx-auto max-w-7xl p-6 lg:px-8">{props.children}</main>
-          </CartProvider>
-        </ShopifyProvider>
+        <Providers>
+          <Header />
+          <main className="mx-auto max-w-7xl p-6 lg:px-8">{props.children}</main>
+        </Providers>
       </body>
     </html>
   );
