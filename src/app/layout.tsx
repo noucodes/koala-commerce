@@ -23,7 +23,7 @@ export default function Layout(props: Props) {
   return (
     <html lang="en" className="light">
       <body>
-        <TopLoader color="orange" />
+        <TopLoader color="blue" />
         <Providers>
           <Header />
           <main className="mx-autolg:px-8">{props.children}</main>

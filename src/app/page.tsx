@@ -6,6 +6,7 @@ import { Card } from '@/components/ui/card';
 import { useEffect, useRef, useState } from 'react';
 import { GL } from '@/components/gl';
 import { Badge } from '@/components/ui/badge';
+import Link from 'next/link';
 
 interface ScrollAnimationProps {
   children: React.ReactNode;
@@ -190,12 +191,14 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <Button
+            <Link href="/products"><Button
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-primary/90 text-base px-8 py-6"
             >
               Shop Mattresses
             </Button>
+            </Link>
+            
             <Button
               size="lg"
               variant="outline"

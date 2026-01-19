@@ -41,23 +41,9 @@ export function Header() {
   }
 
   return (
-    <header className="fixed z-50 top-0 left-0 w-full border-b">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-2 lg:px-8 color-white" aria-label="Global">
-        <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5">
-            <div className="flex items-center gap-2">
-              <Image
-                src="/logo.png"
-                width={100}
-                height={100}
-                alt="Picture of the Koala"
-              />
-              <div className="text-xl font-semibold text-foreground">Koala Sleep</div>
-            </div>
-          </Link>
-        </div>
-
-        <div className="hidden lg:flex lg:gap-x-5">
+    <header className="fixed z-50 top-0 left-0 w-full border-b backdrop-blur-md">
+      <nav className="mx-auto grid max-w-7xl grid-cols-3 items-center lg:px-8" aria-label="Global">
+        <div className="hidden lg:flex gap-x-5 justify-start">
           {mainMenuItems.map(({ text, href }) => (
             <Link
               className={`text-sm text-foreground/80 hover:text-foreground transition
@@ -70,7 +56,20 @@ export function Header() {
           ))}
         </div>
 
-        <div className="flex flex-1 items-center justify-end gap-4">
+        <div className="flex justify-center">
+          <Link href="/" className="">
+            <div className="flex items-center gap-2">
+              <Image
+                src="/logo.png"
+                width={100}
+                height={100}
+                alt="Picture of the Koala"
+              />
+            </div>
+          </Link>
+        </div>
+
+        <div className="flex justify-end items-center gap-4">
           <Link href="/cart" className="relative">
             <span className="sr-only">Cart</span>
             <ShoppingCart className="h-6 w-6" />
