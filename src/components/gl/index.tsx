@@ -1,4 +1,3 @@
-import { Perf } from "r3f-perf";
 import { Effects } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { useControls } from "leva";
@@ -54,7 +53,7 @@ export const GL = ({ hovering }: { hovering: boolean }) => {
         }}
       >
         {/* <Perf position="top-left" /> */}
-        <color attach="background" args={["#fff"]} />
+        <color attach="background" args={["#000"]} />
         <Particles
           speed={speed}
           aperture={aperture}
