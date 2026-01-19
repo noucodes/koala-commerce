@@ -4,6 +4,7 @@ import { Header } from "./header";
 import TopLoader from "nextjs-toploader";
 import Providers from "./providers";
 import "./globals.css";
+import { CustomCursor } from "@/components/custom-cursor"
 
 export const metadata: Metadata = {
   title: {
@@ -25,7 +26,8 @@ export default function Layout(props: Props) {
         <TopLoader color="orange" />
         <Providers>
           <Header />
-          <main className="mx-auto max-w-7xl p-6 lg:px-8">{props.children}</main>
+          <main className="mx-autolg:px-8">{props.children}</main>
+          <CustomCursor />
         </Providers>
       </body>
     </html>

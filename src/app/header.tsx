@@ -8,19 +8,25 @@ import { Menu, ShoppingBag, ShoppingCart } from "@esmate/shadcn/pkgs/lucide-reac
 import { Button } from "@esmate/shadcn/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@esmate/shadcn/components/ui/sheet";
 import { Badge } from "@esmate/shadcn/components/ui/badge";
+import Image from 'next/image'
+
 
 const mainMenuItems: { text: string; href: string }[] = [
   {
-    text: "Home",
-    href: "/",
+    text: "Mattresses",
+    href: "/#mattresses",
   },
   {
-    text: "Products",
-    href: "/products",
+    text: "Sizes",
+    href: "/#sizes",
   },
   {
-    text: "Cart",
-    href: "/cart",
+    text: "Why Koala",
+    href: "/#why",
+  },
+  {
+    text: "FAQ",
+    href: "/#faq",
   },
 ];
 
@@ -35,20 +41,26 @@ export function Header() {
   }
 
   return (
-    <header className="border-b">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <header className="fixed z-50 top-0 left-0 w-full border-b">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between p-2 lg:px-8 color-white" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">Next Shopify Storefront</span>
-            <ShoppingBag className="h-6 w-6" />
+            <div className="flex items-center gap-2">
+              <Image
+                src="/logo.png"
+                width={100}
+                height={100}
+                alt="Picture of the Koala"
+              />
+              <div className="text-xl font-semibold text-foreground">Koala Sleep</div>
+            </div>
           </Link>
         </div>
 
         <div className="hidden lg:flex lg:gap-x-5">
           {mainMenuItems.map(({ text, href }) => (
             <Link
-              className={`text-sm leading-6 font-semibold transition-colors hover:text-primary ${
-                isMenuItemActive(href) ? "text-primary" : "text-foreground"
+              className={`text-sm text-foreground/80 hover:text-foreground transition
               }`}
               key={href}
               href={href}
