@@ -48,6 +48,7 @@
     "@types/node": "^24.10.4",
     "@types/react": "^18.3.27",
     "@types/react-dom": "^18.3.7",
+    "@types/three": "^0.182.0",
     "eslint": "^9.39.2",
     "eslint-config-next": "^16.1.1",
     "esmate": "^2.1.4",
