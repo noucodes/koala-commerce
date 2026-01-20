@@ -80,7 +80,6 @@ const categories = ['All Product', 'Memory Foam', 'Hybrid', 'Latex'];
 const filterOptions = ['New Arrival', 'Best Seller', 'On Discount'];
 
 export function ProductList(props: Props) {
-  const searchParams = useSearchParams();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All Product');
   const [openFilter, setOpenFilter] = useState<string | null>(null);
