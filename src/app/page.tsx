@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from 'react';
 import { GL } from '@/components/gl';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
+import { Leva } from 'leva';
 
 interface ScrollAnimationProps {
   children: React.ReactNode;
@@ -163,6 +164,7 @@ export default function Home() {
   ];
 
   return (
+    <><Leva hidden />
     <div className="w-full overflow-hidden bg-background">
       {/* Hero Section */}
       <section className="relative flex flex-col h-screen items-center justify-center overflow-hidden bg-background">
@@ -194,6 +196,8 @@ export default function Home() {
             <Link href="/products"><Button
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-primary/90 text-base px-8 py-6"
+              onMouseEnter={() => setHovering(true)}
+              onMouseLeave={() => setHovering(false)}
             >
               Shop Mattresses
             </Button>
@@ -203,6 +207,8 @@ export default function Home() {
               size="lg"
               variant="outline"
               className="border-primary text-primary hover:bg-primary/10 text-base px-8 py-6 bg-transparent"
+              onMouseEnter={() => setHovering(true)}
+              onMouseLeave={() => setHovering(false)}
             >
               View Size Guide
             </Button>
@@ -519,5 +525,6 @@ export default function Home() {
         </div>
       </footer>
     </div>
+    </>
   );
 }
